@@ -11,9 +11,10 @@ Installation
 
 Usage
 -----
-
-    {% for entry in craft.entries|sortByField('height') %}
-
+```
+{% for entry in craft.entries|sortByField('height') %}
+```
 The filter also accepts an optional `direction` parameter:
-
-    {% for entry in craft.entries|sortByField('weight', 'desc') %}
+```
+{% for entry in craft.entries|sortByField('weight', 'desc') %}
+```
