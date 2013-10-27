@@ -20,7 +20,7 @@ class SortByFieldPlugin extends BasePlugin
         return 'http://dannynimmo.co.nz/';
     }
 
-    public function hookAddTwigExtension() {
+    public function addTwigExtension() {
         Craft::import('plugins.sortbyfield.twigextensions.SortByFieldTwigExtension');
         return new SortByFieldTwigExtension();
     }
