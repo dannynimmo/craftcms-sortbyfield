@@ -3,6 +3,8 @@ sortByField for [Craft CMS](http://buildwithcraft.com/)
 
 Adds a "sortByField" Twig filter which sorts an array of entries by the specified field's value.
 
+**Please note this filter is no longer needed with the latest version of Craft CMS, the functionality is included by default.**
+
 Installation
 ------------
 
