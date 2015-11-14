@@ -25,7 +25,7 @@ class SortByFieldTwigExtension extends Twig_Extension
     public function sortByFieldFilter($content, $sort_by = null, $direction = 'asc') {
         if(!is_array($content)) {
             throw new Exception(Craft::t('Variable passed to the sortByField filter is not an array'));
-        } elseif(!(isset($content[0]) && is_object($content[0]) && get_class($content[0]) === 'Craft\EntryModel')) {
+        } elseif(!(isset($content[0]) && is_object($content[0]) && (get_class($content[0]) === 'Craft\EntryModel' || get_class($content[0]) === 'Craft\Commerce_ProductModel') )) {
             throw new Exception(Craft::t('Variables passed to the sortByField filter are not entries'));
         } elseif($sort_by === null) {
             throw new Exception(Craft::t('No sort by parameter passed to the sortByField filter'));
